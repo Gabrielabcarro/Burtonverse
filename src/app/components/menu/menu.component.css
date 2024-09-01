@@ -1,0 +1,30 @@
+.menu {
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  align-items: center;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #4B0082;
+}
+
+
