@@ -4,6 +4,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { CardComponent } from './components/card/card.component';
 
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
