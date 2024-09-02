@@ -1,12 +1,13 @@
-<div class="division"></div>
+
+<div class="watchedmovies"> Most Watched Movies </div>
 <div class="card">
-<mat-card id="corpsebride" style="margin-left: 5px">
+<mat-card ngIf="corpsebride" id="corpsebride" style="margin-left: 5px">
   <mat-card-header>
-    <mat-card-title>Corpse Bride</mat-card-title>
+    <mat-card-title>{{ filme.Title }}</mat-card-title>
   </mat-card-header>
   <img mat-card-image src="/bride.jpg" alt="Card image">
   <mat-card-content>
-    <p>This is the content of the card.</p>
+    <p><strong>year:</strong>{{filme.Year}}</p>
   </mat-card-content>
   <!-- <mat-card-actions>
   </mat-card-actions> -->
@@ -19,8 +20,6 @@
   <mat-card-content>
     <p>This is the content of the card.</p>
   </mat-card-content>
-  <!-- <mat-card-actions>
-  </mat-card-actions> -->
 </mat-card>
 <mat-card  id="alice">
   <mat-card-header>
@@ -30,8 +29,6 @@
   <mat-card-content>
     <p>This is the content of the card.</p>
   </mat-card-content>
-  <!-- <mat-card-actions>
-  </mat-card-actions> -->
 </mat-card>
 <mat-card id="chocolatefactory" style="margin-right: 5px;">
   <mat-card-header>
@@ -41,7 +38,5 @@
   <mat-card-content>
     <p>This is the content of the card.</p>
   </mat-card-content>
-  <!-- <mat-card-actions>
-  </mat-card-actions> -->
 </mat-card>
 </div>

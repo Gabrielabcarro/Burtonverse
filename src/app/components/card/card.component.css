@@ -1,12 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 *{
 border-radius: 0;
 
 }
-.division {
-background-color: #380000;
-height: 20px;
+.watchedmovies {
+background-color: #520612;
+color: #fff;
+font-family: "Bebas Neue", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 40px;
+text-shadow: 4px 4px 4px #d82943;
+padding: 30px 0px 15px 30px;
+}
+mat-card-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  text-shadow: 4px 4px 4px #d82943;
 }
 .card {
 display: flex;
@@ -23,12 +36,12 @@ mat-card {
   gap: 1rem;
   margin-right: 10px;
 }
-
-.corpsebride {
-  font-family: "Rock Salt", cursive;
+  mat-card-title {
+font-family: "Bebas Neue", sans-serif;
 font-weight: 400;
 font-style: normal;
-
+font-size: 25px;
+text-shadow: 4px 4px 4px #d82943;
 }
 
 img {
