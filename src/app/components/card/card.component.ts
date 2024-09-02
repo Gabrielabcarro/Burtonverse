@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { environment } from '../../../environments/environment';
+import { Movie } from '../../models/model';
+import { MovieService } from '../../movie.service';
 
 @Component({
   selector: 'app-card',
@@ -15,21 +15,30 @@ import { environment } from '../../../environments/environment';
 
 export class CardComponent  implements OnInit {
 
-corpsebride!: Observable<any>;
-beetlejuice!: Observable<any>;
-alice!: Observable<any>;
-charlie!: Observable<any>;
 
-  constructor(private http: HttpClient) {}
+Moviecorpsebride: Observable<Movie>;
+Moviebeetlejuice: Observable<Movie>;
+Moviealice: Observable<Movie>;
+Moviecharlie: Observable<Movie>;
+
+constructor(private MovieService: MovieService) {}
 
   ngOnInit(): void {
-    const {corpsebride, beetlejuice,aliceinwonderland,chocolatefactory} = environment.endpoints;
+    // Obtém os dados do endpoint 'corpsebride'
+    this.Moviecorpsebride = this.MovieService.getCorpseBride();
 
-    this.corpsebride = this.http.get(corpsebride);
-    this.beetlejuice = this.http.get(beetlejuice);
-    this.alice = this.http.get(aliceinwonderland);
-    this.charlie = this.http.get(chocolatefactory);
+    // Obtém os dados de outro endpoint
+    this.Moviebeetlejuice = this.MovieService.getBeetleJuice();
+
+
+    // Obtém os dados de outro endpoint
+    this.Moviealice = this.MovieService.getAliceInWonderland();
+
+    this.Moviecharlie = this.MovieService.getChocolateFactory();
   }
 }
+
+
+
 
 
